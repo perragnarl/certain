@@ -1,18 +1,25 @@
 import Layout from "../components/Layout/Layout";
-import Summary from "../components/widgets/Summary/Summary";
+import Widget from "../components/Widget/Widget";
 
 export default function Home({ summaries }) {
   return (
     <Layout>
-      {summaries.map((summary) => (
-        <Summary number={summary.number} background="bg-lime-200">{summary.text}</Summary>
-      ))}
+        {summaries.map((summary) => (
+          <div key={summary.id}>
+            <Widget cols="1" rows="1" background={summary.color}>
+              <div className="flex flex-col justify-center h-full items-center">
+                <div className="text-7xl font-bold mb-2">{summary.number}</div>
+                <div className="text-center text-lg font-semibold">{summary.text}</div>
+              </div>
+            </Widget>
+          </div>
+        ))}
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`http://localhost:3000/api/summary`);
+  const res = await fetch(`http://localhost:3000/api/summaries`);
   const data = await res.json();
 
   if (!data) {

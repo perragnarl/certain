@@ -3,7 +3,7 @@ import Logo from "../Logo/Logo";
 
 export default function Sidebar() {
   return (
-    <div id="sidebar" className="h-screen bg-white">
+    <div id="sidebar" className="bg-white">
       <Logo />
       <Menu />
     </div>

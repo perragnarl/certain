@@ -1,7 +1,12 @@
+import Link from "next/link"
+import LogoImage from "./LogoImage";
+
 export default function Logo() {
   return (
-    <a id="logo" href="/" className="flex pl-8 h-[80px]">
-      <img src="/Certain.svg" width={84} height={24} alt="Certain" />
-    </a>
-  )
+    <Link href="/">
+      <a id="logo" className="flex pl-8 h-[80px] items-center hover:text-brand transition-all">
+        <LogoImage />
+      </a>
+    </Link>
+  );
 }

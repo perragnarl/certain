@@ -1,0 +1,54 @@
+.widget {
+  @apply rounded-3xl p-6;
+}
+.cols-1 {
+  @apply col-span-1;
+}
+.cols-2 {
+  @apply col-span-2;
+}
+.cols-3 {
+  @apply col-span-3;
+}
+.cols-4 {
+  @apply col-span-4;
+}
+.rows-1 {
+  @apply row-span-1;
+}
+.rows-2 {
+  @apply row-span-2;
+}
+.rows-3 {
+  @apply row-span-3;
+}
+.rows-4 {
+  @apply row-span-4;
+}
+.rows-5 {
+  @apply row-span-5;
+}
+.rows-6 {
+  @apply row-span-6;
+}
+.white {
+  @apply bg-white text-black;
+}
+.black {
+  @apply bg-black text-white;
+}
+.sky {
+  @apply bg-sky-200 text-sky-700;
+}
+.teal {
+  @apply bg-teal-200 text-teal-700;
+}
+.green {
+  @apply bg-green-200 text-green-700;
+}
+.rose {
+  @apply bg-rose-200 text-rose-700;
+}
+.purple {
+  @apply bg-purple-200 text-purple-700;
+}
