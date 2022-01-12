@@ -25,7 +25,7 @@ export default function Home({ summaries }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_SUMMARY);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/summaries`);
   const data = await res.json();
 
   if (!data) {

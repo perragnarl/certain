@@ -1,6 +1,6 @@
 import MenuItem from "./MenuItem";
 import { useRouter } from "next/router";
-import { Home2, Profile2User, Setting3 } from "iconsax-react";
+import { Group, HomeSimpleDoor, Settings } from "iconoir-react";
 
 export default function Menu() {
   const router = useRouter();
@@ -10,19 +10,19 @@ export default function Menu() {
         active={router.pathname === "/" ? true : false} 
         href="/"
       >
-        <Home2 className="mr-6" size={32} /> Home
+        <HomeSimpleDoor className="w-8 h-8 mr-6" /> Home
       </MenuItem>
       <MenuItem
         active={router.pathname === "/people" ? true : false}
         href="/people"
       >
-        <Profile2User className="mr-6" size={32} /> People
+        <Group className="w-8 h-8 mr-6" /> People
       </MenuItem>
       <MenuItem
         active={router.pathname === "/settings" ? true : false}
         href="/settings"
       >
-        <Setting3 className="mr-6" size={32} /> Settings
+        <Settings className="w-8 h-8 mr-6" /> Settings
       </MenuItem>
     </nav>
   );

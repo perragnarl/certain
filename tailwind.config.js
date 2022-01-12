@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+			fontFamily: {
+				'inter-variable': ['"InterVariable"'],
+			},
       colors: {
         brand: "rgba(168, 85, 247, 1)",
       },

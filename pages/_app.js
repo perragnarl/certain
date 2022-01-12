@@ -1,7 +1,7 @@
 import Header from '../components/Header/Header'
-import Logo from '../components/Logo/Logo'
 import Sidebar from '../components/Sidebar/Sidebar'
 import '../styles/globals.css'
+import "@fontsource/inter/variable.css";
 
 function MyApp({ Component, pageProps }) {
   return (

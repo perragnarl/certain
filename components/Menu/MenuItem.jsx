@@ -5,7 +5,7 @@ export default function MenuItem({ children, href, active }) {
 
   return (
     <Link href={href}>
-      <a className={`pl-[calc(2rem-4px)] border-l-[6px] transition-all hover:border-brand ${activeClass}`}>
+      <a className={`pl-[calc(2rem-4px)] font-semibold border-l-[6px] transition-all hover:border-brand ${activeClass}`}>
         <span className="flex py-1 items-center pr-8 hover:text-brand hover:translate-x-1 transition-all">
           {children}
         </span>
