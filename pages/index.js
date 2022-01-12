@@ -2,33 +2,7 @@ import Head from "next/head";
 import Layout from "../components/Layout/Layout";
 import Widget from "../components/Widget/Widget";
 
-export default function Home() {
-  const summaries = [
-    {
-      id: 1,
-      number: 2,
-      text: "About to expire",
-      color: "green",
-    },
-    {
-      id: 2,
-      number: 4,
-      text: "Recently renewed",
-      color: "sky",
-    },
-    {
-      id: 3,
-      number: 12,
-      text: "Active certificates",
-      color: "purple",
-    },
-    {
-      id: 4,
-      number: 7,
-      text: "Employees registered",
-      color: "rose",
-    },
-  ]
+export default function Home({ summaries }) {
   return (
     <Layout>
       <Head>
@@ -50,20 +24,19 @@ export default function Home() {
   );
 }
 
-// export async function getStaticProps() {
-//   const baseUrl = `${window.location.protocol}//${window.location.host}`
-//   const res = await fetch(baseUrl+process.env.NEXT_PUBLIC_API_SUMMARY);
-//   const data = await res.json();
+export async function getStaticProps() {
+  const res = await fetch(process.env.NEXT_PUBLIC_API_SUMMARY);
+  const data = await res.json();
 
-//   if (!data) {
-//     return {
-//       notFound: true,
-//     };
-//   }
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
 
-//   return {
-//     props: {
-//       summaries: data,
-//     },
-//   };
-// }
+  return {
+    props: {
+      summaries: data,
+    },
+  };
+}
