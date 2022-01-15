@@ -2,30 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  @apply font-inter-variable;
+  font-family: "InterVariable", sans-serif;
 }
-#logo {
-  grid-area: logo;
-}
-#sidebar {
-  grid-area: sidebar;
-}
-#header {
-  grid-area: header;
-}
-#main {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: repeat(4, [col-start] 1fr);
-  grid-template-rows: repeat(6, [row-start] 1fr);
-  gap: 20px;
-}
-#app {
-  display: grid;
-  grid-template-columns: 240px auto;
-  grid-template-rows: 80px auto;
-  grid-template-areas:
-    "sidebar  header"
-    "sidebar  main";
-  /* "sidebar  footer"; */
-}
+

@@ -1,9 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-export default function HeaderUserLink({href, children, ...rest}) {
+export default function HeaderUserLink({ href, children }) {
   return (
-    <Link href={href}>
-      <a {...rest}>{children}</a>
-    </Link>
-  )
+    <div>
+      <Link href={href}>
+        <a className="py-3 px-5 transition-all text-sm font-semibold hover:bg-brand hover:text-white flex items-center">
+          {children}
+        </a>
+      </Link>
+    </div>
+  );
 }

@@ -1,0 +1,9 @@
+.small {
+  @apply min-w-[16rem];
+}
+.medium {
+  @apply min-w-[28rem];
+}
+.large {
+  @apply min-w-[36rem];
+}
